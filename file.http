@@ -1,0 +1,27 @@
+GET http://localhost:5050/utente
+
+###
+POST http://localhost:5050/utente/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Matteo",
+    "cognome": "Borrelli",
+    "email": "email@gmail.com",
+    "password": "asdfgh"
+}
+
+###
+GET http://localhost:5050/products/6554a677b917a2a9acab345f
+
+###
+POST http://localhost:5050/products/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Mirio Togata Lemillioin",
+    "category": "Cosplay",
+    "prezzo": "108.9",
+    "cover1": "https://www.negoziodicosplay.it/wp-content/uploads/2021/09/My-Hero-Academia-Season-4-Mirio-Togata-Costume-Le-Million-Cosplay_COS3429-600x600.jpg" ,
+    "description": ""
+}
