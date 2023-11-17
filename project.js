@@ -3,6 +3,7 @@ const mongoose = require ('mongoose')
 const productRoute = require('./routes/products')
 const utenteRoute = require('./routes/utente')
 const loginRoute = require('./routes/login')
+const payRoute = require('./routes/payment')
 
 
 const cors = require('cors');
@@ -16,9 +17,11 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static("public"))
 app.use('/', productRoute)
 app.use('/', utenteRoute)
 app.use('/', loginRoute)
+app.use('/', payRoute)
 
 
 mongoose.connect('mongodb+srv://metbor23:c4EWjZFAixwTf@zabusa.yzwygw5.mongodb.net/', {
